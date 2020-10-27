@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*это столбики(вертикальные)*/ /* или написать :repeat(3(cколько столбцов), 1fr)*/
+    grid-template-rows: repeat(4, minmax(1fr, auto)); /* это ряды*/ /* 1й аргумент минимальная величина 2й максимальная */
+    gap: 10px;
+    width: 75%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+}
+
+.container div {
+    background: cadetblue;
+    padding: 30px;
+}
+
+.container div:nth-child(even){
+    background: darkslategray;
+}
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.two{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.five{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.nine {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
